@@ -1,0 +1,113 @@
+# Tyler Doc Agent Documentation
+# AI-powered documentation generation that's better than Mintlify—and 100x cheaper
+
+title: Tyler Doc Agent
+description: AI-powered documentation generation that's better than Mintlify—and 100x cheaper
+baseurl: "/tyler-doc-agent"
+url: "https://repomirrorhq.github.io"
+
+# Theme
+theme: jekyll-theme-cayman
+markdown: kramdown
+
+# Plugins
+plugins:
+  - jekyll-relative-links
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Relative links configuration
+relative_links:
+  enabled: true
+  collections: true
+
+# Include files
+include:
+  - README.md
+
+# Exclude from build
+exclude:
+  - .agent/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Kramdown settings
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
+# SEO
+author: RepoMirror Team
+twitter:
+  username: repomirrorhq
+  card: summary_large_image
+
+# Social links
+github_username: repomirrorhq
+
+# Google Analytics (optional - add your tracking ID)
+# google_analytics: UA-XXXXXXXXX-X
+
+# Collections (if needed in future)
+collections:
+  architecture:
+    output: true
+    permalink: /architecture/:name/
+  api:
+    output: true
+    permalink: /api/:name/
+  guides:
+    output: true
+    permalink: /guides/:name/
+  examples:
+    output: true
+    permalink: /examples/:name/
+  comparison:
+    output: true
+    permalink: /comparison/:name/
+  contributing:
+    output: true
+    permalink: /contributing/:name/
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: "architecture"
+    values:
+      layout: "default"
+      section: "architecture"
+  - scope:
+      path: "api"
+    values:
+      layout: "default"
+      section: "api"
+  - scope:
+      path: "guides"
+    values:
+      layout: "default"
+      section: "guides"
+  - scope:
+      path: "examples"
+    values:
+      layout: "default"
+      section: "examples"
+  - scope:
+      path: "comparison"
+    values:
+      layout: "default"
+      section: "comparison"
+  - scope:
+      path: "contributing"
+    values:
+      layout: "default"
+      section: "contributing"

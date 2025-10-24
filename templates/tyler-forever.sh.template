@@ -1,0 +1,27 @@
+#!/bin/bash
+# Tyler Doc Agent - Continuous documentation generation
+# This will run forever, improving documentation until stopped
+
+echo "🤖 Tyler Doc Agent - Continuous Documentation Generation"
+echo "Press Ctrl+C to stop"
+echo ""
+
+while :; do
+    echo "================================================"
+    echo "Documentation iteration starting at $(date)"
+    echo "================================================"
+
+    .tyler/sync.sh
+
+    EXIT_CODE=$?
+
+    if [ $EXIT_CODE -ne 0 ]; then
+        echo "Documentation sync failed with exit code $EXIT_CODE"
+        echo "Waiting 5 seconds before retry..."
+        sleep 5
+    else
+        echo "Documentation iteration completed successfully"
+        echo "Waiting 2 seconds before next iteration..."
+        sleep 2
+    fi
+done

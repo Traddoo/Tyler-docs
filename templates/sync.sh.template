@@ -1,0 +1,4 @@
+#!/bin/bash
+cat .tyler/prompt.md | \
+        claude -p --output-format=stream-json --verbose --dangerously-skip-permissions --add-dir ${repo} | \
+        tee -a .tyler/claude_output.jsonl

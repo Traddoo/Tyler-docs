@@ -1,0 +1,28 @@
+# Source files
+src/
+tsconfig.json
+.eslintrc.js
+
+# Tests
+tests/
+*.test.ts
+*.spec.ts
+
+# Development
+.git/
+.github/
+.vscode/
+.idea/
+
+# Docs (not needed in package)
+*.md
+!README.md
+
+# Runtime
+.tyler/
+tyler.yaml
+docs/
+
+# Misc
+.DS_Store
+*.log
